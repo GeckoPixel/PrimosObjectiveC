@@ -1,0 +1,26 @@
+#import <Foundation/Foundation.h>
+
+int main (int argc, const char * argv[])
+{
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    for(int i= 2; i<100; i++)
+    {
+    	if(i%2!=0||i==2)
+    	{
+    		int counter = 0;
+    		for(int j = 1; j<=i; j++)
+    		{
+    			if(i%j==0)
+    			{
+    				counter++;
+    			}
+    		}
+    		if(counter==2)
+    		{
+    			NSLog(@"primo%d\n",i);
+    		}
+    	}
+    }
+    [pool drain];
+    return 0;
+}
